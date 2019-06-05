@@ -1,6 +1,5 @@
 <?php
-$file = 'file:///home/compere/www/ProjetPhp/source.xml';
-//$xml = simplexml_load_file($file);
+$xml = simplexml_load_file("source.xml");
 ?>
 
 
@@ -22,16 +21,13 @@ $file = 'file:///home/compere/www/ProjetPhp/source.xml';
 
 
 <?php 
+ $fichier = "source.xml";
 
- $file = "file:///home/compere/www/ProjetPhp/source.xml";
-
-    // Ma propre fonction de traitement du texte
-    // qui est appelée par le "parseur"
-    function fonctionTexte($parseur, $texte)
+function fonctionTexte($parseur, $texte)
     {
         // Dans l'immédiat nous nous contentons d'afficher
-        // le texte brut accompagné d'un simple retour à la ligne
-        echo $texte."<br/>";
+        // le texte brut 
+        echo $texte;
     }
 
     // Création du parseur XML
@@ -42,7 +38,7 @@ $file = 'file:///home/compere/www/ProjetPhp/source.xml';
     xml_set_character_data_handler($parseurXML, "fonctionTexte");
 
     // Ouverture du fichier
-    $fp = fopen($file, "r");
+    $fp = fopen($fichier, "r");
     if (!$fp) die("Impossible d'ouvrir le fichier XML");
 
     // Lecture ligne par ligne
@@ -56,7 +52,16 @@ $file = 'file:///home/compere/www/ProjetPhp/source.xml';
     
     xml_parser_free($parseurXML);
     fclose($fp);
-?>
+
+ for($i = 1;$i <= 4;$i++) {
+            ?>
+        <p><a href="<?= 'source.xml'?>">Page <?= $i ?></a></p>
+        
+        <?php
+         }
+         
+            
+         ?> 
 
 
 
