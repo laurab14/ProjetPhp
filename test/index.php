@@ -28,7 +28,7 @@
                       $nmb = $i;
                       ?>
                   <li class="nav-item active">   
-                      <a class="nav-link" href="/page-<?=$nmb?>.html"><?php  echo $xml->page[$i]->menu; ?></a>
+                      <a class="nav-link" href="?/<?=$nmb?>"><?php  echo $xml->page[$i]->menu; ?></a>
                       </li>
                   <?php
                   }
