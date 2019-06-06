@@ -3,6 +3,7 @@
 
  <head>
 <meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Akronim%7CFaster+One%7CFredericka+the+Great%7CJosefin+Sans%7CLondrina+Shadow%7CLondrina+Solid%7CMonoton%7CPress+Start+2P%7CVT323&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,7 +18,7 @@
       $xml = simplexml_load_file($file);
        
       ?>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav id="menuQ" class="navbar navbar-expand-lg navbar-light">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -36,7 +37,8 @@
               </ul>
           </div>
       </nav>
-
+      <div class="container-fluid">
+          <div class="col-8 mx-auto">
       <?php
       if(!count($_GET)){
           echo $xml->page[0]->content;
@@ -65,7 +67,8 @@
       }
      
       ?>
-     
+          </div>
+      </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
