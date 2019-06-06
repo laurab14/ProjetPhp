@@ -1,6 +1,9 @@
 <?php
+ $file = 'source.xml';
+$xml = simplexml_load_file($file);
 
  ?>
+
  <!DOCTYPE html>
  <html lang="fr" dir="ltr">
 
@@ -16,10 +19,19 @@
   </head>
 
   <body>
+<?php
+ print_r($xml);
+ 
+ ?><p><?php echo $xml->page->menu[0];?></p>
+<?php echo $xml->page->menu[1]; ?>
 
-
-
-
+<?php 
+foreach ($xml as $key => $value) {
+    // $arr[3] sera mis à jour avec chaque valeur de $arr...
+    echo "{$key} => {$value} ";
+    print_r($arr);
+}
+?>
 
 
 
