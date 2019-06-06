@@ -26,11 +26,11 @@ $xml = simplexml_load_file($file);
 
 
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav id="menuQ" class="navbar navbar-expand-lg navbar-light">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div  class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
                   <?php
                   for ($i = 0; $i <= 3; $i++) {
@@ -45,7 +45,8 @@ $xml = simplexml_load_file($file);
               </ul>
           </div>
       </nav>
-
+      <div class="container-fluid">
+          <div class="col-8 mx-auto">
       <?php
       if(!count($_GET)){
           echo $xml->page[0]->content;
@@ -74,7 +75,8 @@ $xml = simplexml_load_file($file);
       }
      
       ?>
-     
+     </div>
+      </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
