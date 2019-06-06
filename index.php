@@ -28,7 +28,7 @@
                       $nmb = $i;
                       ?>
                   <li class="nav-item active">   
-                      <a class="nav-link" href="?/<?=$nmb?>.html"><?php  echo $xml->page[$i]->menu; ?></a>
+                      <a class="nav-link" href="/page-<?=$nmb?>.html"><?php  echo $xml->page[$i]->menu; ?></a>
                       </li>
                   <?php
                   }
@@ -41,23 +41,23 @@
       if(!count($_GET)){
           echo $xml->page[0]->content;
       }
-        if (isset($_GET['/0.html'])) {
+        if (isset($_GET['/0'])) {
           echo $xml->page[0]->content;
       } else {
       
       }
-      if (isset($_GET['/1.html'])){
+      if (isset($_GET['/1'])){
          echo $xml->page[1]->content;
         } else {
            
       }
-        if (isset($_GET['/2.html'])){
+        if (isset($_GET['/2'])){
           echo $xml->page[2]->content;
       } else {
 
       }
       
-        if (isset($_GET['/3.html'])){
+        if (isset($_GET['/3'])){
           echo $xml->page[3]->content;
       } else {
             
