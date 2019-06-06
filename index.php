@@ -24,12 +24,11 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
                   <?php
-                      
                   for ($i = 0; $i <= 3; $i++) {
                       $nmb = $i;
                       ?>
                   <li class="nav-item active">   
-                      <a class="nav-link" href="?/<?=$nmb?>"><?php  echo $xml->page[$i]->menu; ?></a>
+                      <a class="nav-link" href="?/<?=$nmb?>.html"><?php  echo $xml->page[$i]->menu; ?></a>
                       </li>
                   <?php
                   }
@@ -39,27 +38,32 @@
       </nav>
 
       <?php
-        if (isset($_GET['/0'])) {
+      if(!count($_GET)){
+          echo $xml->page[0]->content;
+      }
+        if (isset($_GET['/0.html'])) {
           echo $xml->page[0]->content;
       } else {
       
       }
-      if (isset($_GET['/1'])){
+      if (isset($_GET['/1.html'])){
          echo $xml->page[1]->content;
         } else {
            
       }
-        if (isset($_GET['/2'])){
+        if (isset($_GET['/2.html'])){
           echo $xml->page[2]->content;
       } else {
 
       }
       
-        if (isset($_GET['/3'])){
+        if (isset($_GET['/3.html'])){
           echo $xml->page[3]->content;
       } else {
+            
  
       }
+     
       ?>
      
 
